@@ -1,0 +1,98 @@
+def calcular_nota(preco, lista_precos, fator_penalidade):
+    soma_precos = sum(lista_precos)
+    menor_preco = min(lista_precos)
+    maior_preco = max(lista_precos)
+    
+    #nota = ((preco / soma_precos * 10) - 10 - ((preco - menor_preco) / (maior_preco - menor_preco)) * fator_penalidade) * (-1)
+    # - (((preco - menor_preco) / (maior_preco - menor_preco)) * 5)
+    nota = (10 - ((preco / soma_precos) * 10)) - (((preco - menor_preco) / (maior_preco - menor_preco)) * fator_penalidade)
+    
+    return nota
+    
+# Taxas de impacto:
+#   -> 1 - impacto mínimo    
+#   -> 2 - impacto baixo
+#   -> 3 - impacto moderado
+#   -> 4 - impacto alto
+#   -> 5 - impacto muito alto
+
+# Exemplo de uso
+lista_precos = [120.99, 130.39, 145.99, 152.19]
+print(sum(lista_precos))
+fator_penalidade = 5
+
+for preco in lista_precos:
+    nota = calcular_nota(preco, lista_precos, fator_penalidade)
+    print(f"Preço: {preco}, Nota: {nota:.2f}")
+
+------------------------------------------------------------------------------
+
+def calcular_nota(preco, lista_precos, fator_penalidade):
+    soma_precos = sum(lista_precos)
+    menor_preco = min(lista_precos)
+    maior_preco = max(lista_precos)
+    
+    diferenca_maior_menor = 1 if (maior_preco - menor_preco) == 0 else maior_preco - menor_preco
+    
+    #nota = ((preco / soma_precos * 10) - 10 - ((preco - menor_preco) / (maior_preco - menor_preco)) * fator_penalidade) * (-1)
+    # - (((preco - menor_preco) / (maior_preco - menor_preco)) * 5)
+    nota = (10 - ((preco / soma_precos) * 10)) - (((preco - menor_preco) / diferenca_maior_menor) * fator_penalidade)
+    
+    return nota
+    
+# Taxas de impacto:
+#   -> 1 - impacto mínimo    
+#   -> 2 - impacto baixo
+#   -> 3 - impacto moderado
+#   -> 4 - impacto alto
+#   -> 5 - impacto muito alto
+
+# Exemplo de uso
+lista_precos = [150, 140, 130, 1]
+print(sum(lista_precos))
+fator_penalidade = 5
+
+for preco in lista_precos:
+    nota = calcular_nota(preco, lista_precos, fator_penalidade)
+    print(f"Preço: {preco}, Nota: {nota:.2f}")
+
+------------------------------------------------------------------------------
+
+def calcular_nota(preco, lista_precos):
+    soma_precos = sum(lista_precos)
+    menor_preco = min(lista_precos)
+    maior_preco = max(lista_precos)
+    
+    diferenca_maior_menor = 1 if (maior_preco - menor_preco) == 0 else maior_preco - menor_preco
+
+    nota = (10 - ((preco / soma_precos) * 10)) - ((preco - menor_preco) / diferenca_maior_menor)
+    
+    return nota
+
+# Exemplo de uso
+lista_precos = [150, 140, 130, 120]
+
+for preco in lista_precos:
+    nota = calcular_nota(preco, lista_precos)
+    print(f"Preço: {preco}, Nota: {nota:.2f}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

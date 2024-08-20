@@ -1,0 +1,19 @@
+package com.faculdade.apigeracaodemanda.functionsCalculatesDemandVariables;
+
+import com.faculdade.apigeracaodemanda.models.Jogada;
+import com.faculdade.apigeracaodemanda.models.Partida;
+
+import java.util.Comparator;
+
+public class CalculoQualidade {
+
+
+    public static void calculaNotasQualidadeDemandas(Partida partida) {
+
+        // Percorre as jogadas da partida
+        for (Jogada jogada : partida.getJogadas()) {
+
+
+        }
+    }
+}

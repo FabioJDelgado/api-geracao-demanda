@@ -1,0 +1,78 @@
+/*ublic Map<String, String> validaDadosCadastro(){
+        // Variável retorno
+        Map<String, String> map = new HashMap<>();
+
+        // Verifica se a quantidade de rodadas é menor que 6
+        if(this.quantidadeRodadas < 6){
+            map.put("quantidadeRodadas", "Uma partidadeve ter no mínimo 6 rodadas");
+        }
+
+        // Verifica se a intenção de compra é menor que 1000
+        if(this.intencaoCompra < 1000){
+            map.put("intencaoCompra", "A quantidade consumidores dispostos a consumir o produto deve de ser no mínimo 1000");
+        }
+
+        // Verifica se a variável renda é negativa
+        if(Util.stringVazia(this.tipoProduto) || !(this.tipoProduto.equals("essencial") || this.tipoProduto.equals("secundario") || this.tipoProduto.equals("luxo/superfluo"))){
+            map.put("tipoProduto", "O tipo do produto não pode ser vazio ou nulo e deve ser um dos valores: essencial, secundario ou luxo/superfluo");
+        }
+
+        // Verifica se há erro na vairaável microeconomica
+        Map<String, String> mapMicro = this.variavelMicroeconomica.validaDadosCadastro();
+        if(!mapMicro.isEmpty()){
+            map.putAll(mapMicro);
+        }
+
+        // Verifica se há erro na vairaável macroeconomica
+        Map<String, String> mapMacro = this.variavelMacroeconomica.validaDadosCadastro(this.quantidadeRodadas);
+        if(!mapMacro.isEmpty()){
+            map.putAll(mapMacro);
+        }
+
+        return map;
+    }*/
+		
+		
+		public Map<String, String> validaDadosCadastro(int qtdRodadas){
+        // Variável retorno
+        Map<String, String> map = new HashMap<>();
+
+        // Verifica se a quantidade de taxas básicas de juros é igual a quantidade de rodadas
+        if(this.taxaBasicaJuros.size() != qtdRodadas){
+            map.put("taxaBasicaJuros", "A quantidade de taxas básicas de juros deve ser igual a quantidade de rodadas");
+        }
+
+        // Verifica se alguma taxa básica de juros é nula
+        for (Map.Entry<String, Double> entry : this.taxaBasicaJuros.entrySet()) {
+            if(entry.getValue() == null){
+                map.put("Variável Taxa Básica de Juros", (map.containsKey("taxaBasicaJuros") ?
+                                                          map.get("taxaBasicaJuros") + " e não pode ter valor(es) nulo(s)" :
+                                                          "A taxa básica de juros não pode ter valor(es) nulo(s)"));
+                break;
+            }
+        }
+
+        // Verifica se a variável renda é negativa
+        if(this.renda < 0){
+            map.put("renda", "A renda do consumidor não deve ser negativa");
+        }
+
+        return map;
+    }
+		
+		public Map<String, String> validaDadosCadastro(){
+        // Variável retorno
+        Map<String, String> map = new HashMap<>();
+
+        // Verifica se a soma dos percentuais de propaganda é igual a 100
+        if((this.porcentagemPropagandaRadio + this.porcentagemPropagandaJornal + this.porcentagemPropagandaTV + this.porcentagemPropagandaInternet) != 100){
+            map.put("porcentagemMeiosPropaganda", "A soma dos percentuais de propaganda deve ser igual a 100");
+        }
+
+        // Verifica se a soma dos percentuais de todas as variáveis é igual a 100
+        if((this.propaganda + this.qualidade + this.preco + this.capacidadeInstalada) != 100){
+            map.put("porcentagemVariaveisMicroeconomicas", "A soma dos percentuais de todas as variáveis deve ser igual a 100");
+        }
+
+        return map;
+    }
