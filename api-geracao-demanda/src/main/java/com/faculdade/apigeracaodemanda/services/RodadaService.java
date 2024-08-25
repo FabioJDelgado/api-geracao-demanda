@@ -2,9 +2,7 @@ package com.faculdade.apigeracaodemanda.services;
 
 import com.faculdade.apigeracaodemanda.dtos.PartidaRegistroRodadaResponseDto;
 import com.faculdade.apigeracaodemanda.dtos.RodadaRegistroResquestDto;
-import com.faculdade.apigeracaodemanda.functionsCalculatesDemandVariables.CalculoCapacidadeInstalada;
-import com.faculdade.apigeracaodemanda.functionsCalculatesDemandVariables.CalculoPreco;
-import com.faculdade.apigeracaodemanda.functionsCalculatesDemandVariables.CalculoPropaganda;
+import com.faculdade.apigeracaodemanda.functionsCalculatesDemandVariables.CalculoTaxaBasicaJurosRenda;
 import com.faculdade.apigeracaodemanda.mapper.JogadaMapper;
 import com.faculdade.apigeracaodemanda.mapper.PartidaMapper;
 import com.faculdade.apigeracaodemanda.models.Jogada;
@@ -53,19 +51,25 @@ public class RodadaService {
         // Chama o método para fazer os cálculos das jogadas da rodada
         calcularJogadasRodada(partida, rodada.getIdentificacaoRodada());
 
+        // Salvar partida em arquivo
+        Util.salvaPartida(partida);
+
         // Retorna a rodada registrada
         return PartidaMapper.toPartidaRegistroRodadaResponseDto(partida, rodada.getIdentificacaoRodada());
     }
 
     private void calcularJogadasRodada(Partida partida, String identificacaoRodada){
 
-        // Calcula demanda do preço
-        CalculoPreco.calculaNotasPrecoDemandas(partida, identificacaoRodada);
+        // Calcula impacto da taxa básica de juros e renda na intenção de compra
+        CalculoTaxaBasicaJurosRenda.calculaTaxaBasicaJurosRenda(partida);
 
-//        // Calcula demanda da propaganda
-//        CalculoPropaganda.calculaNotasPropagandaDemandas(partida, identificacaoRodada);
-//
-//        // Calcula demanda da capacidade instalada
-//        CalculoCapacidadeInstalada.calculaNotasCapacidadeInstaladaDemandas(partida, identificacaoRodada);
+        // Calcula demanda do preço
+        // CalculoPreco.calculaNotasPrecoDemandas(partida, identificacaoRodada);
+
+        // Calcula demanda da propaganda
+        // CalculoPropaganda.calculaNotasPropagandaDemandas(partida, identificacaoRodada);
+
+        // Calcula demanda da capacidade instalada
+        // CalculoCapacidadeInstalada.calculaNotasCapacidadeInstaladaDemandas(partida, identificacaoRodada);
     }
 }
