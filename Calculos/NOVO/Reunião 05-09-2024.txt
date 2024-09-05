@@ -1,0 +1,37 @@
+--------- Selic ---------
+
+inflação = IPCA
+taxa básica de juros = selic
+
+- informar no cadastro da partida taxa de juros (selic) inicial
+- receber um novo valor a cada três rodadas
+- deixar claro que receberemos isso da camada do jogo que está utilizando a API
+
+Justificar como foi usada a Selic, ou seja, pq recebemos a cada três rodadas e como funciona o impacto dela na demanda
+
+
+
+--------- Renda ---------
+
+Justificar que a renda está associada a demanda, não precisa estar no cálculo, mas justificar no trabalho
+
+
+
+--------- Cacidade instalada ---------
+
+- criar setups de lojas
+	- tamanho pré-fixados
+	- número de caixas máximo
+- qtd de caixas
+- qtd de funcionários para caixa
+- qtd de repositores
+- qtd gerentes
+- é obrigatório pelo menos ter três funcionários
+- proporção de caixa e operador de estoque 1x1
+
+
+
+--------- Qualidade ---------
+
+- Mudar o nome da variável para confiabilidade
+- Relacionamos a qualidade diretamente a defeito no produto
