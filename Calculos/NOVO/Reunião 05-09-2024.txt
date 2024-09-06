@@ -35,3 +35,26 @@ Justificar que a renda está associada a demanda, não precisa estar no cálculo
 
 - Mudar o nome da variável para confiabilidade
 - Relacionamos a qualidade diretamente a defeito no produto
+
+
+
+-------------------------------------------------------
+
+- área financeira (Gitman)
+- marketing (Kotler)
+- economia 
+- produção (Slake)
+
+
+Tópicos
+
+- conceitos gerais
+- relacionamento entre variáveis
+- paremetrização
+- código
+- teste
+- conclusão
+
+
+
+
