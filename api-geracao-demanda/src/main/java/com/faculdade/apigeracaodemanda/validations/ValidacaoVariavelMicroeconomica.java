@@ -15,16 +15,16 @@ public class ValidacaoVariavelMicroeconomica implements ConstraintValidator<Vali
 
         List<ErroInfo> erros = new ArrayList<>();
 
+        if (dto.fatorPenalidadePreco() < 1 || dto.fatorPenalidadePreco() > 5) {
+            erros.add(new ErroInfo("fatorPenalidadePreco", "O fator de penalidade do preço deve ser um valor entre 1 e 5"));
+        }
+
         if (!isPorcentagemMeiosPropagandaValida(dto)) {
             erros.add(new ErroInfo("porcentagemMeiosPropaganda", "A soma das porcentagens dos meios de propaganda deve ser igual a 100"));
         }
 
         if (!isPorcentagemVariavelMicroeconomicaValida(dto)) {
             erros.add(new ErroInfo("porcentagemVariaveisMicroeconomicas", "A soma das porcentagens das variáveis microeconomicas deve ser igual a 100"));
-        }
-
-        if (dto.fatorPenalidadePreco() < 1 || dto.fatorPenalidadePreco() > 5) {
-            erros.add(new ErroInfo("fatorPenalidadePreco", "O fator de penalidade do preço deve ser um valor entre 1 e 5"));
         }
 
         for (ErroInfo e : erros) {
@@ -37,9 +37,8 @@ public class ValidacaoVariavelMicroeconomica implements ConstraintValidator<Vali
     }
 
     private boolean isPorcentagemMeiosPropagandaValida(VariavelMicroeconomicaRequestDto dto) {
-//        double soma = dto.porcentagemPropagandaRadio() + dto.porcentagemPropagandaJornal() + dto.porcentagemPropagandaTV() + dto.porcentagemPropagandaInternet();
-//        return soma == 100;
-        return true;
+        double soma = dto.porcentagemPropagandaRadio() + dto.porcentagemPropagandaJornal() + dto.porcentagemPropagandaTV() + dto.porcentagemPropagandaInternet();
+        return soma == 100;
     }
 
     private boolean isPorcentagemVariavelMicroeconomicaValida(VariavelMicroeconomicaRequestDto dto) {

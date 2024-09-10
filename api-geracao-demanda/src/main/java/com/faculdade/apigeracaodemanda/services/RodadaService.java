@@ -2,6 +2,8 @@ package com.faculdade.apigeracaodemanda.services;
 
 import com.faculdade.apigeracaodemanda.dtos.PartidaRegistroRodadaResponseDto;
 import com.faculdade.apigeracaodemanda.dtos.RodadaRegistroResquestDto;
+import com.faculdade.apigeracaodemanda.functionsCalculatesDemandVariables.CalculoPreco;
+import com.faculdade.apigeracaodemanda.functionsCalculatesDemandVariables.CalculoPropaganda;
 import com.faculdade.apigeracaodemanda.functionsCalculatesDemandVariables.CalculoTaxaBasicaJurosRenda;
 import com.faculdade.apigeracaodemanda.mapper.JogadaMapper;
 import com.faculdade.apigeracaodemanda.mapper.PartidaMapper;
@@ -60,16 +62,11 @@ public class RodadaService {
 
     private void calcularJogadasRodada(Partida partida, String identificacaoRodada){
 
-        // Calcula impacto da taxa básica de juros e renda na intenção de compra
-        CalculoTaxaBasicaJurosRenda.calculaTaxaBasicaJurosRenda(partida);
-
         // Calcula demanda do preço
-        // CalculoPreco.calculaNotasPrecoDemandas(partida, identificacaoRodada);
+        CalculoPreco.calculaNotasPrecoDemandas(partida, identificacaoRodada);
 
         // Calcula demanda da propaganda
-        // CalculoPropaganda.calculaNotasPropagandaDemandas(partida, identificacaoRodada);
+        CalculoPropaganda.calculaDemandaPropaganda(partida, identificacaoRodada);
 
-        // Calcula demanda da capacidade instalada
-        // CalculoCapacidadeInstalada.calculaNotasCapacidadeInstaladaDemandas(partida, identificacaoRodada);
     }
 }

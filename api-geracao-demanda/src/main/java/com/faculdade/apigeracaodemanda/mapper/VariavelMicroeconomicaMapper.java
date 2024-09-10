@@ -7,29 +7,48 @@ public class VariavelMicroeconomicaMapper {
 
     public static VariavelMicroeconomica toEntity(VariavelMicroeconomicaRequestDto variavelMicroeconomicaRequestDto) {
         VariavelMicroeconomica variavelMicroeconomica = new VariavelMicroeconomica();
-//        variavelMicroeconomica.setPropaganda(variavelMicroeconomicaRequestDto.propaganda());
-//        variavelMicroeconomica.setPorcentagemPropagandaRadio(variavelMicroeconomicaRequestDto.porcentagemPropagandaRadio());
-//        variavelMicroeconomica.setPorcentagemPropagandaJornal(variavelMicroeconomicaRequestDto.porcentagemPropagandaJornal());
-//        variavelMicroeconomica.setPorcentagemPropagandaTV(variavelMicroeconomicaRequestDto.porcentagemPropagandaTV());
-//        variavelMicroeconomica.setPorcentagemPropagandaInternet(variavelMicroeconomicaRequestDto.porcentagemPropagandaInternet());
-//        variavelMicroeconomica.setQualidade(variavelMicroeconomicaRequestDto.qualidade());
+
         variavelMicroeconomica.setPreco(variavelMicroeconomicaRequestDto.preco());
         variavelMicroeconomica.setFatorPenalidadePreco(variavelMicroeconomicaRequestDto.fatorPenalidadePreco());
-//        variavelMicroeconomica.setCapacidadeInstalada(variavelMicroeconomicaRequestDto.capacidadeInstalada());
+
+        variavelMicroeconomica.setPropaganda(variavelMicroeconomicaRequestDto.propaganda());
+
+        variavelMicroeconomica.setPorcentagemPropagandaRadio(variavelMicroeconomicaRequestDto.porcentagemPropagandaRadio());
+        variavelMicroeconomica.setValorMinimoPropagandaRadio(variavelMicroeconomicaRequestDto.valorMinimoPropagandaRadio());
+        variavelMicroeconomica.setProporcaoCrescimentoPropagandaRadio(variavelMicroeconomicaRequestDto.proporcaoCrescimentoPropagandaRadio());
+
+        variavelMicroeconomica.setPorcentagemPropagandaJornal(variavelMicroeconomicaRequestDto.porcentagemPropagandaJornal());
+        variavelMicroeconomica.setValorMinimoPropagandaJornal(variavelMicroeconomicaRequestDto.valorMinimoPropagandaJornal());
+        variavelMicroeconomica.setProporcaoCrescimentoPropagandaJornal(variavelMicroeconomicaRequestDto.proporcaoCrescimentoPropagandaJornal());
+
+        variavelMicroeconomica.setPorcentagemPropagandaTV(variavelMicroeconomicaRequestDto.porcentagemPropagandaTV());
+        variavelMicroeconomica.setValorMinimoPropagandaTV(variavelMicroeconomicaRequestDto.valorMinimoPropagandaTV());
+        variavelMicroeconomica.setProporcaoCrescimentoPropagandaTV(variavelMicroeconomicaRequestDto.proporcaoCrescimentoPropagandaTV());
+
+        variavelMicroeconomica.setPorcentagemPropagandaInternet(variavelMicroeconomicaRequestDto.porcentagemPropagandaInternet());
+        variavelMicroeconomica.setValorMinimoPropagandaInternet(variavelMicroeconomicaRequestDto.valorMinimoPropagandaInternet());
+        variavelMicroeconomica.setProporcaoCrescimentoPropagandaInternet(variavelMicroeconomicaRequestDto.proporcaoCrescimentoPropagandaInternet());
+
         return variavelMicroeconomica;
     }
 
     public static VariavelMicroeconomicaRequestDto toDto(VariavelMicroeconomica variavelMicroeconomica) {
         return new VariavelMicroeconomicaRequestDto(
-//            variavelMicroeconomica.getPropaganda(),
-//            variavelMicroeconomica.getPorcentagemPropagandaRadio(),
-//            variavelMicroeconomica.getPorcentagemPropagandaJornal(),
-//            variavelMicroeconomica.getPorcentagemPropagandaTV(),
-//            variavelMicroeconomica.getPorcentagemPropagandaInternet(),
-//            variavelMicroeconomica.getQualidade(),
             variavelMicroeconomica.getPreco(),
-            variavelMicroeconomica.getFatorPenalidadePreco()
-//            variavelMicroeconomica.getCapacidadeInstalada()
+            variavelMicroeconomica.getFatorPenalidadePreco(),
+            variavelMicroeconomica.getPropaganda(),
+            variavelMicroeconomica.getPorcentagemPropagandaRadio(),
+            variavelMicroeconomica.getValorMinimoPropagandaRadio(),
+            variavelMicroeconomica.getProporcaoCrescimentoPropagandaRadio(),
+            variavelMicroeconomica.getPorcentagemPropagandaJornal(),
+            variavelMicroeconomica.getValorMinimoPropagandaJornal(),
+            variavelMicroeconomica.getProporcaoCrescimentoPropagandaJornal(),
+            variavelMicroeconomica.getPorcentagemPropagandaTV(),
+            variavelMicroeconomica.getValorMinimoPropagandaTV(),
+            variavelMicroeconomica.getProporcaoCrescimentoPropagandaTV(),
+            variavelMicroeconomica.getPorcentagemPropagandaInternet(),
+            variavelMicroeconomica.getValorMinimoPropagandaInternet(),
+            variavelMicroeconomica.getProporcaoCrescimentoPropagandaInternet()
         );
     }
 }
