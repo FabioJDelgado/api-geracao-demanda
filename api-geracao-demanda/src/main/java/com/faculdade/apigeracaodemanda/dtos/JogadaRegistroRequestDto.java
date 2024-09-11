@@ -20,6 +20,15 @@ public record JogadaRegistroRequestDto(
         double investimentoPropagandaTV,
         @NotNull(message = "O investimento propaganda internet não pode ser nulo")
         @Min(value = 0, message = "O investimento propaganda internet deve ser maior ou igual a 0")
-        double investimentoPropagandaInternet
+        double investimentoPropagandaInternet,
+        @NotNull(message = "A quantidade de produtos em estoque do fornecedor 1 não pode ser nula")
+        @Min(value = 0, message = "A quantidade de produtos em estoque do fornecedor 1 deve ser maior ou igual a 0")
+        int qtdProdutosEstoqueFornecedor1,
+        @NotNull(message = "A quantidade de produtos em estoque do fornecedor 2 não pode ser nula")
+        @Min(value = 0, message = "A quantidade de produtos em estoque do fornecedor 2 deve ser maior ou igual a 0")
+        int qtdProdutosEstoqueFornecedor2,
+        @NotNull(message = "A quantidade de produtos em estoque do fornecedor 3 não pode ser nula")
+        @Min(value = 0, message = "A quantidade de produtos em estoque do fornecedor 3 deve ser maior ou igual a 0")
+        int qtdProdutosEstoqueFornecedor3
 ) {
 }

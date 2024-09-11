@@ -29,6 +29,10 @@ public class VariavelMicroeconomicaMapper {
         variavelMicroeconomica.setValorMinimoPropagandaInternet(variavelMicroeconomicaRequestDto.valorMinimoPropagandaInternet());
         variavelMicroeconomica.setProporcaoCrescimentoPropagandaInternet(variavelMicroeconomicaRequestDto.proporcaoCrescimentoPropagandaInternet());
 
+        variavelMicroeconomica.setConfiabilidadeProduto1(variavelMicroeconomicaRequestDto.confiabilidadeProduto1());
+        variavelMicroeconomica.setConfiabilidadeProduto2(variavelMicroeconomicaRequestDto.confiabilidadeProduto2());
+        variavelMicroeconomica.setConfiabilidadeProduto3(variavelMicroeconomicaRequestDto.confiabilidadeProduto3());
+
         return variavelMicroeconomica;
     }
 
@@ -48,7 +52,10 @@ public class VariavelMicroeconomicaMapper {
             variavelMicroeconomica.getProporcaoCrescimentoPropagandaTV(),
             variavelMicroeconomica.getPorcentagemPropagandaInternet(),
             variavelMicroeconomica.getValorMinimoPropagandaInternet(),
-            variavelMicroeconomica.getProporcaoCrescimentoPropagandaInternet()
+            variavelMicroeconomica.getProporcaoCrescimentoPropagandaInternet(),
+            variavelMicroeconomica.getConfiabilidadeProduto1(),
+            variavelMicroeconomica.getConfiabilidadeProduto2(),
+            variavelMicroeconomica.getConfiabilidadeProduto3()
         );
     }
 }

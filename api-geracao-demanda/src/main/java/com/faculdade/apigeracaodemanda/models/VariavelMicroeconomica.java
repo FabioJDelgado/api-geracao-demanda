@@ -6,7 +6,6 @@ import java.util.Map;
 
 public class VariavelMicroeconomica implements Serializable {
 
-
     // Preço - INÍCIO
     private double preco;
     private int fatorPenalidadePreco;
@@ -32,6 +31,11 @@ public class VariavelMicroeconomica implements Serializable {
     private double proporcaoCrescimentoPropagandaInternet;
     // Propaganda - FIM
 
+    // Confiabilidade - INÍCIO
+    private int confiabilidadeProduto1;
+    private int confiabilidadeProduto2;
+    private int confiabilidadeProduto3;
+    // Confiabilidade - FIM
 
 
     public VariavelMicroeconomica() {
@@ -155,5 +159,29 @@ public class VariavelMicroeconomica implements Serializable {
 
     public void setProporcaoCrescimentoPropagandaInternet(double proporcaoCrescimentoPropagandaInternet) {
         this.proporcaoCrescimentoPropagandaInternet = proporcaoCrescimentoPropagandaInternet;
+    }
+
+    public int getConfiabilidadeProduto1() {
+        return confiabilidadeProduto1;
+    }
+
+    public void setConfiabilidadeProduto1(int confiabilidadeProduto1) {
+        this.confiabilidadeProduto1 = confiabilidadeProduto1;
+    }
+
+    public int getConfiabilidadeProduto2() {
+        return confiabilidadeProduto2;
+    }
+
+    public void setConfiabilidadeProduto2(int confiabilidadeProduto2) {
+        this.confiabilidadeProduto2 = confiabilidadeProduto2;
+    }
+
+    public int getConfiabilidadeProduto3() {
+        return confiabilidadeProduto3;
+    }
+
+    public void setConfiabilidadeProduto3(int confiabilidadeProduto3) {
+        this.confiabilidadeProduto3 = confiabilidadeProduto3;
     }
 }

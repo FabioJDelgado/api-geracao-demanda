@@ -17,6 +17,10 @@ public class JogadaMapper {
         jogada.setInvestimentoPropagandaTV(jogadaRegistroRequestDto.investimentoPropagandaTV());
         jogada.setInvestimentoPropagandaInternet(jogadaRegistroRequestDto.investimentoPropagandaInternet());
 
+        jogada.setQtdProdutosEstoqueFornecedor1(jogadaRegistroRequestDto.qtdProdutosEstoqueFornecedor1());
+        jogada.setQtdProdutosEstoqueFornecedor2(jogadaRegistroRequestDto.qtdProdutosEstoqueFornecedor2());
+        jogada.setQtdProdutosEstoqueFornecedor3(jogadaRegistroRequestDto.qtdProdutosEstoqueFornecedor3());
+
         return jogada;
     }
 

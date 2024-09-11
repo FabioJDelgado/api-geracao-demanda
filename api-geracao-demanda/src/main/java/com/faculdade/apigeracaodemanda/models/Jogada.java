@@ -36,6 +36,12 @@ public class Jogada implements Serializable {
     private int demandaTotalPropaganda;
     // Propaganda - FIM
 
+    // Confiabilidade - INÍCIO
+    private int qtdProdutosEstoqueFornecedor1;
+    private int qtdProdutosEstoqueFornecedor2;
+    private int qtdProdutosEstoqueFornecedor3;
+    // Confiabilidade - FIM
+
 
     public Jogada() {
     }
@@ -182,5 +188,29 @@ public class Jogada implements Serializable {
 
     public void setDemandaTotalPropaganda(int demandaTotalPropaganda) {
         this.demandaTotalPropaganda = demandaTotalPropaganda;
+    }
+
+    public int getQtdProdutosEstoqueFornecedor1() {
+        return qtdProdutosEstoqueFornecedor1;
+    }
+
+    public void setQtdProdutosEstoqueFornecedor1(int qtdProdutosEstoqueFornecedor1) {
+        this.qtdProdutosEstoqueFornecedor1 = qtdProdutosEstoqueFornecedor1;
+    }
+
+    public int getQtdProdutosEstoqueFornecedor2() {
+        return qtdProdutosEstoqueFornecedor2;
+    }
+
+    public void setQtdProdutosEstoqueFornecedor2(int qtdProdutosEstoqueFornecedor2) {
+        this.qtdProdutosEstoqueFornecedor2 = qtdProdutosEstoqueFornecedor2;
+    }
+
+    public int getQtdProdutosEstoqueFornecedor3() {
+        return qtdProdutosEstoqueFornecedor3;
+    }
+
+    public void setQtdProdutosEstoqueFornecedor3(int qtdProdutosEstoqueFornecedor3) {
+        this.qtdProdutosEstoqueFornecedor3 = qtdProdutosEstoqueFornecedor3;
     }
 }

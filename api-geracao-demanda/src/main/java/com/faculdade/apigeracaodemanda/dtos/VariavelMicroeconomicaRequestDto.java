@@ -38,6 +38,15 @@ public record VariavelMicroeconomicaRequestDto(
         double valorMinimoPropagandaInternet,
         @NotNull(message = "Proporção crescimento propaganda internet não pode ser nulo")
         @Min(value = 1, message = "Proporção crescimento propaganda internet deve ser de pelo menos 1")
-        double proporcaoCrescimentoPropagandaInternet
+        double proporcaoCrescimentoPropagandaInternet,
+        @NotNull(message = "Confiabilidade produto 1 não pode ser nulo")
+        @Min(value = 1, message = "Confiabilidade produto 1 não pode ser menor que 1")
+        int confiabilidadeProduto1,
+        @NotNull(message = "Confiabilidade produto 2 não pode ser nulo")
+        @Min(value = 1, message = "Confiabilidade produto 2 não pode ser menor que 1")
+        int confiabilidadeProduto2,
+        @NotNull(message = "Confiabilidade produto 3 não pode ser nulo")
+        @Min(value = 1, message = "Confiabilidade produto 3 não pode ser menor que 1")
+        int confiabilidadeProduto3
 ) {
 }
