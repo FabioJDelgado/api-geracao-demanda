@@ -2,6 +2,7 @@ package com.faculdade.apigeracaodemanda.services;
 
 import com.faculdade.apigeracaodemanda.dtos.PartidaRegistroRodadaResponseDto;
 import com.faculdade.apigeracaodemanda.dtos.RodadaRegistroResquestDto;
+import com.faculdade.apigeracaodemanda.functionsCalculatesDemandVariables.CalculoConfiabilidade;
 import com.faculdade.apigeracaodemanda.functionsCalculatesDemandVariables.CalculoPreco;
 import com.faculdade.apigeracaodemanda.functionsCalculatesDemandVariables.CalculoPropaganda;
 import com.faculdade.apigeracaodemanda.functionsCalculatesDemandVariables.CalculoTaxaBasicaJurosRenda;
@@ -67,6 +68,11 @@ public class RodadaService {
 
         // Calcula demanda da propaganda
         CalculoPropaganda.calculaDemandaPropaganda(partida, identificacaoRodada);
+
+
+
+        // Calcula demanda da confiabilidade (Deve ser o último cálculo)
+        CalculoConfiabilidade.calculaConfiabilidade(partida, identificacaoRodada);
 
     }
 }
