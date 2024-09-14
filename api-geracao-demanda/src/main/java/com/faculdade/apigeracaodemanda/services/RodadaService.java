@@ -2,10 +2,7 @@ package com.faculdade.apigeracaodemanda.services;
 
 import com.faculdade.apigeracaodemanda.dtos.PartidaRegistroRodadaResponseDto;
 import com.faculdade.apigeracaodemanda.dtos.RodadaRegistroResquestDto;
-import com.faculdade.apigeracaodemanda.functionsCalculatesDemandVariables.CalculoConfiabilidade;
-import com.faculdade.apigeracaodemanda.functionsCalculatesDemandVariables.CalculoPreco;
-import com.faculdade.apigeracaodemanda.functionsCalculatesDemandVariables.CalculoPropaganda;
-import com.faculdade.apigeracaodemanda.functionsCalculatesDemandVariables.CalculoTaxaBasicaJurosRenda;
+import com.faculdade.apigeracaodemanda.functionsCalculatesDemandVariables.*;
 import com.faculdade.apigeracaodemanda.mapper.JogadaMapper;
 import com.faculdade.apigeracaodemanda.mapper.PartidaMapper;
 import com.faculdade.apigeracaodemanda.models.Jogada;
@@ -63,13 +60,20 @@ public class RodadaService {
 
     private void calcularJogadasRodada(Partida partida, String identificacaoRodada){
 
+        // Calcula impacto da taxa básica de juros
+        // FAZER
+
         // Calcula demanda do preço
         CalculoPreco.calculaNotasPrecoDemandas(partida, identificacaoRodada);
 
         // Calcula demanda da propaganda
         CalculoPropaganda.calculaDemandaPropaganda(partida, identificacaoRodada);
 
+        // Calcula demanda da capacidade instalada
+        // FAZER
 
+        // Calcula demanda da concorrência
+        CalculoConcorrencia.calculaConcorrencia(partida, identificacaoRodada);
 
         // Calcula demanda da confiabilidade (Deve ser o último cálculo)
         CalculoConfiabilidade.calculaConfiabilidade(partida, identificacaoRodada);

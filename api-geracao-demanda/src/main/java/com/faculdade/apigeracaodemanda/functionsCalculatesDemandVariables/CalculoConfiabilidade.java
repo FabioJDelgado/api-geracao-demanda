@@ -27,8 +27,6 @@ public class CalculoConfiabilidade {
             double qtdProdutosPorcentagemFornecedor1 = jogada.getDemandaTotalJogada() * porcentagemEstoqueFornecedor1;
             double qtdProdutosPorcentagemFornecedor2 = jogada.getDemandaTotalJogada() * porcentagemEstoqueFornecedor2;
             double qtdProdutosPorcentagemFornecedor3 = jogada.getDemandaTotalJogada() * porcentagemEstoqueFornecedor3;
-            System.out.println("demandaTotalJogada: " + jogada.getDemandaTotalJogada());
-            System.out.println("qtdProdutosPorcentagemFornecedor1: " + qtdProdutosPorcentagemFornecedor1 + " qtdProdutosPorcentagemFornecedor2: " + qtdProdutosPorcentagemFornecedor2 + " qtdProdutosPorcentagemFornecedor3: " + qtdProdutosPorcentagemFornecedor3);
 
 
             // Aplica a taxa de confiabilidade
@@ -44,7 +42,6 @@ public class CalculoConfiabilidade {
             // Calcula a demanda final
             double demandaFinal = qtdeProdutosFinaisFornecedor1 + qtdeProdutosFinaisFornecedor2 + qtdeProdutosFinaisFornecedor3;
             jogada.setDemandaTotalJogada((int) Math.ceil(demandaFinal));
-
         }
     }
 }
