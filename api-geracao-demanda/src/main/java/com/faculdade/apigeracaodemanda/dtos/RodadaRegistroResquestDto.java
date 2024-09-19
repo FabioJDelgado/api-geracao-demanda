@@ -9,7 +9,9 @@ import java.util.List;
 
 @ValidaRodadaRegistro
 public record RodadaRegistroResquestDto(
+        @NotNull(message = "A identificação da partida não pode ser nula")
         String identificacaoPartida,
+        VariavelMacroeconomicaRegistroRodadaRequestDto variavelMacroeconomica,
         @Valid
         List<JogadaRegistroRequestDto> jogadas
 ) {

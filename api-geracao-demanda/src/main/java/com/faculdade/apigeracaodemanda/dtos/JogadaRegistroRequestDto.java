@@ -5,8 +5,9 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 public record JogadaRegistroRequestDto(
-        @NotBlank
+        @NotBlank(message = "A identificação da jogada não pode ser nula ou vazia")
         String identificacaoJogada,
+        @NotNull(message = "O preço do produto não pode ser nulo")
         @Min(value = 0, message = "O preço do produto deve ser maior ou igual a 0")
         double preco,
         @NotNull(message = "O investimento propaganda rádio não pode ser nulo")

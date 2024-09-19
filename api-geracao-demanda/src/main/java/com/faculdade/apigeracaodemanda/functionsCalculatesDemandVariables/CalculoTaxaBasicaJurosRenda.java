@@ -14,9 +14,9 @@ public class CalculoTaxaBasicaJurosRenda {
             double taxaBasicaJurosAnterior = partida.getVariavelMacroeconomica().getTaxaBasicaJuros().get("rodada" + (partida.getContadorRodadas() - 2));
             double diferencaoTaxaBasicaJuros = taxaBasicaJurosAtual - taxaBasicaJurosAnterior;
 
-            int intencaoCompraAlterada = (int) (partida.getIntencaoCompra() * (1 - ((partida.getVariavelMacroeconomica().getFatorAjuste()/10) * diferencaoTaxaBasicaJuros)));
+            int intencaoCompraAlterada = (int) (partida.getFatiaMercado() * (1 - ((partida.getVariavelMacroeconomica().getFatorAjuste()/10) * diferencaoTaxaBasicaJuros)));
 
-            partida.setIntencaoCompra(intencaoCompraAlterada);
+            partida.setFatiaMercado(intencaoCompraAlterada);
 
         }
 

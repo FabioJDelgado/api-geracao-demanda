@@ -16,7 +16,7 @@ public class CalculoPreco {
         double somaDasNotas = partida.recuperaRodada(identificacaoRodada).getJogadas().stream().mapToDouble(Jogada::getNotaPreco).sum();
 
         // Calcula a demanda total do preço
-        double demandaTotalPreco = partida.getIntencaoCompra() * (partida.getVariavelMicroeconomica().getPreco() / 100);
+        double demandaTotalPreco = partida.getFatiaMercado() * (partida.getVariavelMicroeconomica().getPreco() / 100);
 
         // Percorre a lista para calcular a demanda do preço de cada jogada
         for(Jogada jogada : partida.recuperaRodada(identificacaoRodada).getJogadas()){

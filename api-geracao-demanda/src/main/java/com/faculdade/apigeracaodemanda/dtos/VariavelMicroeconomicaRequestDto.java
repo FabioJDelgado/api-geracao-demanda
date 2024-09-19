@@ -7,10 +7,13 @@ import jakarta.validation.constraints.NotNull;
 
 @ValidaVariavelMicroeconomia
 public record VariavelMicroeconomicaRequestDto(
-        @Min(value = 0, message = "Preço não pode ser negativo")
+        @NotNull(message = "A porcentagem preço não pode ser nula")
         double preco,
+        @NotNull(message = "O fator penalidade preço não pode ser nulo")
         int fatorPenalidadePreco,
+        @NotNull(message = "A porcentagem da propaganda não pode ser nula")
         double propaganda,
+        @NotNull(message = "A porcentagem da propaganda rádio não pode ser nula")
         double porcentagemPropagandaRadio,
         @NotNull(message = "Valor mínimo propaganda radio não pode ser nulo")
         @Min(value = 100, message = "Valor mínimo propaganda radio é 100")
@@ -18,6 +21,7 @@ public record VariavelMicroeconomicaRequestDto(
         @NotNull(message = "Proporção crescimento propaganda radio não pode ser nulo")
         @Min(value = 1, message = "Proporção crescimento propaganda radio deve ser de pelo menos 1")
         double proporcaoCrescimentoPropagandaRadio,
+        @NotNull(message = "A porcentagem propaganda jornal não pode ser nula")
         double porcentagemPropagandaJornal,
         @NotNull(message = "Valor mínimo propaganda jornal não pode ser nulo")
         @Min(value = 100, message = "Valor mínimo propaganda jornal é 100")
@@ -25,6 +29,7 @@ public record VariavelMicroeconomicaRequestDto(
         @NotNull(message = "Proporção crescimento propaganda jornal não pode ser nulo")
         @Min(value = 1, message = "Proporção crescimento propaganda jornal deve ser de pelo menos 1")
         double proporcaoCrescimentoPropagandaJornal,
+        @NotNull(message = "A porcentagem propaganda TV não pode ser nula")
         double porcentagemPropagandaTV,
         @NotNull(message = "Valor mínimo propaganda TV não pode ser nulo")
         @Min(value = 100, message = "Valor mínimo propaganda TV é 100")
@@ -32,6 +37,7 @@ public record VariavelMicroeconomicaRequestDto(
         @NotNull(message = "Proporção crescimento propaganda TV não pode ser nulo")
         @Min(value = 1, message = "Proporção crescimento propaganda TV deve ser de pelo menos 1")
         double proporcaoCrescimentoPropagandaTV,
+        @NotNull(message = "A porcentagem propaganda internet não pode ser nula")
         double porcentagemPropagandaInternet,
         @NotNull(message = "Valor mínimo propaganda internet não pode ser nulo")
         @Min(value = 100, message = "Valor mínimo propaganda internet é 100")

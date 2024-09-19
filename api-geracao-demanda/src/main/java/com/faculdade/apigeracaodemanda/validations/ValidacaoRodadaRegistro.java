@@ -3,6 +3,7 @@ package com.faculdade.apigeracaodemanda.validations;
 import com.faculdade.apigeracaodemanda.dtos.RodadaRegistroResquestDto;
 import com.faculdade.apigeracaodemanda.dtos.VariavelMicroeconomicaRequestDto;
 import com.faculdade.apigeracaodemanda.exceptions.ErroInfo;
+import com.faculdade.apigeracaodemanda.models.Partida;
 import com.faculdade.apigeracaodemanda.utils.Util;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
@@ -27,6 +28,16 @@ public class ValidacaoRodadaRegistro implements ConstraintValidator<ValidaRodada
 
             if (dto.jogadas().size() < 2) {
                 erros.add(new ErroInfo("qtdJogadas", "A quantidade mínima de jogadas em cada rodade é 2"));
+            }
+
+            Partida partida = Util.recuperaPartida(dto.identificacaoPartida());
+
+            if((partida.getContadorRodadas() == 0 || partida.getContadorRodadas() % 3 == 0)){
+                if(dto.variavelMacroeconomica() == null){
+                    erros.add(new ErroInfo("taxaJuros", "A taxa de juros deve ser informada na primeira e a cada 3 rodadas"));
+                } else if(dto.variavelMacroeconomica().taxaJuros() == null){
+                    erros.add(new ErroInfo("taxaJuros", "A taxa de juros deve ser informada na primeira e a cada 3 rodadas"));
+                }
             }
         }
 

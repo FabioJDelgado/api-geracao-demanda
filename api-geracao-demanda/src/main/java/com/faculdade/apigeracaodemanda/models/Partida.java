@@ -1,6 +1,5 @@
 package com.faculdade.apigeracaodemanda.models;
 
-import com.faculdade.apigeracaodemanda.models.enums.TipoProduto;
 import com.faculdade.apigeracaodemanda.utils.Util;
 
 import java.io.Serializable;
@@ -13,15 +12,8 @@ public class Partida implements Serializable {
 
     private String identificacaoPartida;
     private int quantidadeRodadas;
-    private double intencaoCompra;
+    private double fatiaMercado;
 
-    /*
-    Tipos de produtos:
-        - essencial
-	    - secundario
-	    - luxo/superfluo
-    */
-    private TipoProduto tipoProduto;
     private int contadorRodadas;
     private boolean partidaFinalizada;
     private List<Rodada> rodadas = new ArrayList<>();
@@ -47,20 +39,12 @@ public class Partida implements Serializable {
         this.quantidadeRodadas = quantidadeRodadas;
     }
 
-    public double getIntencaoCompra() {
-        return intencaoCompra;
+    public double getFatiaMercado() {
+        return fatiaMercado;
     }
 
-    public void setIntencaoCompra(double intencaoCompra) {
-        this.intencaoCompra = intencaoCompra;
-    }
-
-    public TipoProduto getTipoProduto() {
-        return tipoProduto;
-    }
-
-    public void setTipoProduto(TipoProduto tipoProduto) {
-        this.tipoProduto = tipoProduto;
+    public void setFatiaMercado(double fatiaMercado) {
+        this.fatiaMercado = fatiaMercado;
     }
 
     public int getContadorRodadas() {
@@ -112,20 +96,5 @@ public class Partida implements Serializable {
             }
         }
         return rodada;
-    }
-
-    @Override
-    public String toString() {
-        return "Partida{" +
-                "identificacaoPartida='" + identificacaoPartida + '\'' +
-                ", quantidadeRodadas=" + quantidadeRodadas +
-                ", intencaoCompra=" + intencaoCompra +
-                ", tipoProduto=" + tipoProduto +
-                ", contadorRodadas=" + contadorRodadas +
-                ", partidaFinalizada=" + partidaFinalizada +
-                ", rodadas=" + rodadas +
-                ", variavelMicroeconomica=" + variavelMicroeconomica +
-                ", variavelMacroeconomica=" + variavelMacroeconomica +
-                '}';
     }
 }

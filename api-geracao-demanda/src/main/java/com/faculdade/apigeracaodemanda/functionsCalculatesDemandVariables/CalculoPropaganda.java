@@ -11,7 +11,7 @@ public class CalculoPropaganda {
     private static void calculaDemanda(Partida partida, String identRodada){
 
         // Calcula a demanda total da propaganda que a nota pode pegar
-        double demandaTotalPropaganda = partida.getIntencaoCompra() * (partida.getVariavelMicroeconomica().getPropaganda() / 100);
+        double demandaTotalPropaganda = partida.getFatiaMercado() * (partida.getVariavelMicroeconomica().getPropaganda() / 100);
 
         /* Primeiro calcula a demanda da propaganda no rádio */
         // Somando as notas da propaganda de rádio de todas as jogadas

@@ -22,6 +22,11 @@ public class RodadaService {
         // Recupera a partida informada
         Partida partida = Util.recuperaPartida(rodadaRegistroResquestDto.identificacaoPartida());
 
+        // Atribui as variáveis macroeconômicas (taxa básica de juros) a partida
+        if(partida.getContadorRodadas() == 0 || partida.getContadorRodadas() % 3 == 0){
+            partida.getVariavelMacroeconomica().setAlterarTaxaBasicaJuros(partida.getContadorRodadas() + 1, rodadaRegistroResquestDto.variavelMacroeconomica().taxaJuros());
+        }
+
         // Incrementa a rodada da partida
         partida.setContadorRodadas(partida.getContadorRodadas() + 1);
 
