@@ -3,6 +3,7 @@ package com.faculdade.apigeracaodemanda.mapper;
 import com.faculdade.apigeracaodemanda.dtos.JogadaRegistroRequestDto;
 import com.faculdade.apigeracaodemanda.dtos.JogadaRegistroResponseDto;
 import com.faculdade.apigeracaodemanda.models.Jogada;
+import com.faculdade.apigeracaodemanda.models.enums.TamanhoEstabelecimento;
 
 public class JogadaMapper {
 
@@ -20,6 +21,11 @@ public class JogadaMapper {
         jogada.setQtdProdutosEstoqueFornecedor1(jogadaRegistroRequestDto.qtdProdutosEstoqueFornecedor1());
         jogada.setQtdProdutosEstoqueFornecedor2(jogadaRegistroRequestDto.qtdProdutosEstoqueFornecedor2());
         jogada.setQtdProdutosEstoqueFornecedor3(jogadaRegistroRequestDto.qtdProdutosEstoqueFornecedor3());
+
+        jogada.setTamanhoEstabelecimento(TamanhoEstabelecimento.toEnum(jogadaRegistroRequestDto.tamanhoEstabelecimento()));
+        jogada.setQtdFuncionariosCaixa(jogadaRegistroRequestDto.qtdFuncionariosCaixa());
+        jogada.setQtdFuncionariosEstoque(jogadaRegistroRequestDto.qtdFuncionariosEstoque());
+        jogada.setQtdFuncionariosGerente(jogadaRegistroRequestDto.qtdFuncionariosGerente());
 
         return jogada;
     }

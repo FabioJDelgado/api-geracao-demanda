@@ -1,5 +1,7 @@
 package com.faculdade.apigeracaodemanda.models;
 
+import com.faculdade.apigeracaodemanda.models.enums.TamanhoEstabelecimento;
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -41,6 +43,13 @@ public class Jogada implements Serializable {
     private int qtdProdutosEstoqueFornecedor2;
     private int qtdProdutosEstoqueFornecedor3;
     // Confiabilidade - FIM
+
+    // Capacidade instalada - INÍCIO
+    private TamanhoEstabelecimento tamanhoEstabelecimento;
+    private int qtdFuncionariosCaixa;
+    private int qtdFuncionariosEstoque;
+    private int qtdFuncionariosGerente;
+    // Capacidade instalada - FIM
 
 
     public Jogada() {
@@ -212,5 +221,37 @@ public class Jogada implements Serializable {
 
     public void setQtdProdutosEstoqueFornecedor3(int qtdProdutosEstoqueFornecedor3) {
         this.qtdProdutosEstoqueFornecedor3 = qtdProdutosEstoqueFornecedor3;
+    }
+
+    public TamanhoEstabelecimento getTamanhoEstabelecimento() {
+        return tamanhoEstabelecimento;
+    }
+
+    public void setTamanhoEstabelecimento(TamanhoEstabelecimento tamanhoEstabelecimento) {
+        this.tamanhoEstabelecimento = tamanhoEstabelecimento;
+    }
+
+    public int getQtdFuncionariosCaixa() {
+        return qtdFuncionariosCaixa;
+    }
+
+    public void setQtdFuncionariosCaixa(int qtdFuncionariosCaixa) {
+        this.qtdFuncionariosCaixa = qtdFuncionariosCaixa;
+    }
+
+    public int getQtdFuncionariosEstoque() {
+        return qtdFuncionariosEstoque;
+    }
+
+    public void setQtdFuncionariosEstoque(int qtdFuncionariosEstoque) {
+        this.qtdFuncionariosEstoque = qtdFuncionariosEstoque;
+    }
+
+    public int getQtdFuncionariosGerente() {
+        return qtdFuncionariosGerente;
+    }
+
+    public void setQtdFuncionariosGerente(int qtdFuncionariosGerente) {
+        this.qtdFuncionariosGerente = qtdFuncionariosGerente;
     }
 }

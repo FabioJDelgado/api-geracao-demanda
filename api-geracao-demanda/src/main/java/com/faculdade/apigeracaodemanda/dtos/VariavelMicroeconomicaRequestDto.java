@@ -53,6 +53,15 @@ public record VariavelMicroeconomicaRequestDto(
         int confiabilidadeProduto2,
         @NotNull(message = "Confiabilidade produto 3 não pode ser nulo")
         @Min(value = 1, message = "Confiabilidade produto 3 não pode ser menor que 1")
-        int confiabilidadeProduto3
+        int confiabilidadeProduto3,
+        @NotNull(message = "Peso tamanho estabelecimento não pode ser nulo")
+        @Min(value = 1, message = "Peso tamanho estabelecimento não pode ser menor que 1")
+        double pesoTamanhoEstabelecimento,
+        @NotNull(message = "Peso caixas não pode ser nulo")
+        @Min(value = 1, message = "Peso caixas não pode ser menor que 1")
+        double pesoCaixas,
+        @NotNull(message = "Peso funcionários não pode ser nulo")
+        @Min(value = 1, message = "Peso funcionários não pode ser menor que 1")
+        double pesoFuncionarios
 ) {
 }

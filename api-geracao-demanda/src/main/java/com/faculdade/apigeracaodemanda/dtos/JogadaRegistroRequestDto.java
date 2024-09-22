@@ -1,5 +1,7 @@
 package com.faculdade.apigeracaodemanda.dtos;
 
+import com.faculdade.apigeracaodemanda.models.enums.TamanhoEstabelecimento;
+import com.faculdade.apigeracaodemanda.validations.ValidaEnum;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -30,6 +32,17 @@ public record JogadaRegistroRequestDto(
         int qtdProdutosEstoqueFornecedor2,
         @NotNull(message = "A quantidade de produtos em estoque do fornecedor 3 não pode ser nula")
         @Min(value = 0, message = "A quantidade de produtos em estoque do fornecedor 3 deve ser maior ou igual a 0")
-        int qtdProdutosEstoqueFornecedor3
+        int qtdProdutosEstoqueFornecedor3,
+        @ValidaEnum(enumClass = TamanhoEstabelecimento.class, message = "O tamanho da loja deve ser um dos valores: pequeno, medio ou grande", casosIgnorados = false)
+        String tamanhoEstabelecimento,
+        @NotNull(message = "A quantidade de funcionários no caixa não pode ser nula")
+        @Min(value = 1, message = "A quantidade de funcionários no caixa deve ser maior ou igual a 1")
+        int qtdFuncionariosCaixa,
+        @NotNull(message = "A quantidade de funcionários no estoque não pode ser nula")
+        @Min(value = 1, message = "A quantidade de funcionários no estoque deve ser maior ou igual a 1")
+        int qtdFuncionariosEstoque,
+        @NotNull(message = "A quantidade de funcionários gerente não pode ser nula")
+        @Min(value = 1, message = "A quantidade de funcionários gerente deve ser maior ou igual a 1")
+        int qtdFuncionariosGerente
 ) {
 }
