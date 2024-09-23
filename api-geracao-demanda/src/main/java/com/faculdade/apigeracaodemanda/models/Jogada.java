@@ -46,9 +46,8 @@ public class Jogada implements Serializable {
 
     // Capacidade instalada - INÍCIO
     private TamanhoEstabelecimento tamanhoEstabelecimento;
-    private int qtdFuncionariosCaixa;
-    private int qtdFuncionariosEstoque;
-    private int qtdFuncionariosGerente;
+    private int qtdCaixas;
+    private int qtdFuncionarios;
     // Capacidade instalada - FIM
 
 
@@ -231,27 +230,19 @@ public class Jogada implements Serializable {
         this.tamanhoEstabelecimento = tamanhoEstabelecimento;
     }
 
-    public int getQtdFuncionariosCaixa() {
-        return qtdFuncionariosCaixa;
+    public int getQtdCaixas() {
+        return qtdCaixas;
     }
 
-    public void setQtdFuncionariosCaixa(int qtdFuncionariosCaixa) {
-        this.qtdFuncionariosCaixa = qtdFuncionariosCaixa;
+    public void setQtdCaixas(int qtdCaixas) {
+        this.qtdCaixas = qtdCaixas;
     }
 
-    public int getQtdFuncionariosEstoque() {
-        return qtdFuncionariosEstoque;
+    public int getQtdFuncionarios() {
+        return qtdFuncionarios;
     }
 
-    public void setQtdFuncionariosEstoque(int qtdFuncionariosEstoque) {
-        this.qtdFuncionariosEstoque = qtdFuncionariosEstoque;
-    }
-
-    public int getQtdFuncionariosGerente() {
-        return qtdFuncionariosGerente;
-    }
-
-    public void setQtdFuncionariosGerente(int qtdFuncionariosGerente) {
-        this.qtdFuncionariosGerente = qtdFuncionariosGerente;
+    public void setQtdFuncionarios(int qtdFuncionarios) {
+        this.qtdFuncionarios = qtdFuncionarios;
     }
 }

@@ -23,9 +23,8 @@ public class JogadaMapper {
         jogada.setQtdProdutosEstoqueFornecedor3(jogadaRegistroRequestDto.qtdProdutosEstoqueFornecedor3());
 
         jogada.setTamanhoEstabelecimento(TamanhoEstabelecimento.toEnum(jogadaRegistroRequestDto.tamanhoEstabelecimento()));
-        jogada.setQtdFuncionariosCaixa(jogadaRegistroRequestDto.qtdFuncionariosCaixa());
-        jogada.setQtdFuncionariosEstoque(jogadaRegistroRequestDto.qtdFuncionariosEstoque());
-        jogada.setQtdFuncionariosGerente(jogadaRegistroRequestDto.qtdFuncionariosGerente());
+        jogada.setQtdCaixas(jogadaRegistroRequestDto.qtdCaixas());
+        jogada.setQtdFuncionarios(jogadaRegistroRequestDto.qtdFuncionarios());
 
         return jogada;
     }

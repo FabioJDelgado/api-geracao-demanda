@@ -38,7 +38,9 @@ public class VariavelMicroeconomica implements Serializable {
     // Confiabilidade - FIM
 
     // Capacidade instalada - INÍCIO
-    private double pesoTamanhoEstabelecimento;
+    private double pesoTamanhoEstabelecimentoPequeno;
+    private double pesoTamanhoEstabelecimentoMedio;
+    private double pesoTamanhoEstabelecimentoGrande;
     private double pesoCaixas;
     private double pesoFuncionarios;
     // Capacidade instalada - FIM
@@ -191,12 +193,28 @@ public class VariavelMicroeconomica implements Serializable {
         this.confiabilidadeProduto3 = confiabilidadeProduto3;
     }
 
-    public double getPesoTamanhoEstabelecimento() {
-        return pesoTamanhoEstabelecimento;
+    public double getPesoTamanhoEstabelecimentoPequeno() {
+        return pesoTamanhoEstabelecimentoPequeno;
     }
 
-    public void setPesoTamanhoEstabelecimento(double pesoTamanhoEstabelecimento) {
-        this.pesoTamanhoEstabelecimento = pesoTamanhoEstabelecimento;
+    public void setPesoTamanhoEstabelecimentoPequeno(double pesoTamanhoEstabelecimentoPequeno) {
+        this.pesoTamanhoEstabelecimentoPequeno = pesoTamanhoEstabelecimentoPequeno;
+    }
+
+    public double getPesoTamanhoEstabelecimentoMedio() {
+        return pesoTamanhoEstabelecimentoMedio;
+    }
+
+    public void setPesoTamanhoEstabelecimentoMedio(double pesoTamanhoEstabelecimentoMedio) {
+        this.pesoTamanhoEstabelecimentoMedio = pesoTamanhoEstabelecimentoMedio;
+    }
+
+    public double getPesoTamanhoEstabelecimentoGrande() {
+        return pesoTamanhoEstabelecimentoGrande;
+    }
+
+    public void setPesoTamanhoEstabelecimentoGrande(double pesoTamanhoEstabelecimentoGrande) {
+        this.pesoTamanhoEstabelecimentoGrande = pesoTamanhoEstabelecimentoGrande;
     }
 
     public double getPesoCaixas() {

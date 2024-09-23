@@ -35,14 +35,11 @@ public record JogadaRegistroRequestDto(
         int qtdProdutosEstoqueFornecedor3,
         @ValidaEnum(enumClass = TamanhoEstabelecimento.class, message = "O tamanho da loja deve ser um dos valores: pequeno, medio ou grande", casosIgnorados = false)
         String tamanhoEstabelecimento,
-        @NotNull(message = "A quantidade de funcionários no caixa não pode ser nula")
-        @Min(value = 1, message = "A quantidade de funcionários no caixa deve ser maior ou igual a 1")
-        int qtdFuncionariosCaixa,
-        @NotNull(message = "A quantidade de funcionários no estoque não pode ser nula")
-        @Min(value = 1, message = "A quantidade de funcionários no estoque deve ser maior ou igual a 1")
-        int qtdFuncionariosEstoque,
-        @NotNull(message = "A quantidade de funcionários gerente não pode ser nula")
-        @Min(value = 1, message = "A quantidade de funcionários gerente deve ser maior ou igual a 1")
-        int qtdFuncionariosGerente
+        @NotNull(message = "A quantidade de caixas não pode ser nula")
+        @Min(value = 1, message = "A quantidade de caixas deve ser maior ou igual a 1")
+        int qtdCaixas,
+        @NotNull(message = "A quantidade de funcionários não pode ser nula")
+        @Min(value = 3, message = "A quantidade de funcionários deve ser maior ou igual a 3")
+        int qtdFuncionarios
 ) {
 }

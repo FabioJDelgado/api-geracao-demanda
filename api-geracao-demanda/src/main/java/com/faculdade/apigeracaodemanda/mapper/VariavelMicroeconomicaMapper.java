@@ -33,7 +33,9 @@ public class VariavelMicroeconomicaMapper {
         variavelMicroeconomica.setConfiabilidadeProduto2(variavelMicroeconomicaRequestDto.confiabilidadeProduto2());
         variavelMicroeconomica.setConfiabilidadeProduto3(variavelMicroeconomicaRequestDto.confiabilidadeProduto3());
 
-        variavelMicroeconomica.setPesoTamanhoEstabelecimento(variavelMicroeconomicaRequestDto.pesoTamanhoEstabelecimento());
+        variavelMicroeconomica.setPesoTamanhoEstabelecimentoPequeno(variavelMicroeconomicaRequestDto.pesoTamanhoEstabelecimentoPequeno());
+        variavelMicroeconomica.setPesoTamanhoEstabelecimentoMedio(variavelMicroeconomicaRequestDto.pesoTamanhoEstabelecimentoMedio());
+        variavelMicroeconomica.setPesoTamanhoEstabelecimentoGrande(variavelMicroeconomicaRequestDto.pesoTamanhoEstabelecimentoGrande());
         variavelMicroeconomica.setPesoCaixas(variavelMicroeconomicaRequestDto.pesoCaixas());
         variavelMicroeconomica.setPesoFuncionarios(variavelMicroeconomicaRequestDto.pesoFuncionarios());
 
@@ -60,7 +62,9 @@ public class VariavelMicroeconomicaMapper {
             variavelMicroeconomica.getConfiabilidadeProduto1(),
             variavelMicroeconomica.getConfiabilidadeProduto2(),
             variavelMicroeconomica.getConfiabilidadeProduto3(),
-            variavelMicroeconomica.getPesoTamanhoEstabelecimento(),
+            variavelMicroeconomica.getPesoTamanhoEstabelecimentoPequeno(),
+            variavelMicroeconomica.getPesoTamanhoEstabelecimentoMedio(),
+            variavelMicroeconomica.getPesoTamanhoEstabelecimentoGrande(),
             variavelMicroeconomica.getPesoCaixas(),
             variavelMicroeconomica.getPesoFuncionarios()
         );
