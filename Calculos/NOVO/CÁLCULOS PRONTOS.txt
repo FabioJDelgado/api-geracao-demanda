@@ -1,6 +1,6 @@
 taxa básica de juros -
 preço - V
 propaganda - V
-capacidade instalada -
+capacidade instalada - V
 concorrência - V
 qualidade - V

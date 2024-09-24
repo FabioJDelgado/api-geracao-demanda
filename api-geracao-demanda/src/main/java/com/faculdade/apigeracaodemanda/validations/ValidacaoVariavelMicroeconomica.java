@@ -44,6 +44,8 @@ public class ValidacaoVariavelMicroeconomica implements ConstraintValidator<Vali
     private boolean isPorcentagemVariavelMicroeconomicaValida(VariavelMicroeconomicaRequestDto dto) {
 //        double soma = dto.propaganda() + dto.qualidade() + dto.preco() + dto.capacidadeInstalada();
 //        return soma == 100;
-        return true;
+//        return true;
+        double soma = dto.propaganda() + dto.preco() + dto.capacidadeInstalada();
+        return soma == 100;
     }
 }

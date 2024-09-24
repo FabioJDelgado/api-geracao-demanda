@@ -54,15 +54,35 @@ public record VariavelMicroeconomicaRequestDto(
         @NotNull(message = "Confiabilidade produto 3 não pode ser nulo")
         @Min(value = 1, message = "Confiabilidade produto 3 não pode ser menor que 1")
         int confiabilidadeProduto3,
+        @NotNull(message = "Capacidade instalada não pode ser nula")
+        double capacidadeInstalada,
+        @NotNull(message = "Tamanho estabelecimento pequeno não pode ser nulo")
+        @Min(value = 50, message = "Tamanho estabelecimento pequeno não pode ser menor que 50")
+        double tamanhoEstabelecimentoPequeno,
         @NotNull(message = "Peso tamanho estabelecimento pequeno não pode ser nulo")
         @Min(value = 1, message = "Peso tamanho estabelecimento pequeno não pode ser menor que 1")
         double pesoTamanhoEstabelecimentoPequeno,
+        @NotNull(message = "A quantidade de caixas do estabeleciomento pequeno não pode ser nula")
+        @Min(value = 1, message = "A quantidade de caixas do estabeleciomento pequeno não pode ser menor que 1")
+        int qtdMaxCaixasEstabelecimentoPequeno,
+        @NotNull(message = "Tamanho estabelecimento médio não pode ser nulo")
+        @Min(value = 100, message = "Tamanho estabelecimento médio não pode ser menor que 100")
+        double tamanhoEstabelecimentoMedio,
         @NotNull(message = "Peso tamanho estabelecimento medio não pode ser nulo")
         @Min(value = 1, message = "Peso tamanho estabelecimento medio não pode ser menor que 1")
         double pesoTamanhoEstabelecimentoMedio,
+        @NotNull(message = "A quantidade de caixas do estabeleciomento médio não pode ser nula")
+        @Min(value = 1, message = "A quantidade de caixas do estabeleciomento médio não pode ser menor que 1")
+        int qtdMaxCaixasEstabelecimentoMedio,
+        @NotNull(message = "Tamanho estabelecimento grande não pode ser nulo")
+        @Min(value = 150, message = "Tamanho estabelecimento grande não pode ser menor que 150")
+        double tamanhoEstabelecimentoGrande,
         @NotNull(message = "Peso tamanho estabelecimento grande não pode ser nulo")
         @Min(value = 1, message = "Peso tamanho estabelecimento grande não pode ser menor que 1")
         double pesoTamanhoEstabelecimentoGrande,
+        @NotNull(message = "A quantidade de caixas do estabeleciomento grande não pode ser nula")
+        @Min(value = 1, message = "A quantidade de caixas do estabeleciomento grande não pode ser menor que 1")
+        int qtdMaxCaixasEstabelecimentoGrande,
         @NotNull(message = "Peso caixas não pode ser nulo")
         @Min(value = 1, message = "Peso caixas não pode ser menor que 1")
         double pesoCaixas,

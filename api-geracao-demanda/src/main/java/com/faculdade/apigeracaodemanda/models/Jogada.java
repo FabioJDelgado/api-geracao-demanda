@@ -48,6 +48,9 @@ public class Jogada implements Serializable {
     private TamanhoEstabelecimento tamanhoEstabelecimento;
     private int qtdCaixas;
     private int qtdFuncionarios;
+    private double pontosCapacidadeInstalada;
+    private double notaCapacidadeInstalada;
+    private int demandaCapacidadeInstalada;
     // Capacidade instalada - FIM
 
 
@@ -244,5 +247,29 @@ public class Jogada implements Serializable {
 
     public void setQtdFuncionarios(int qtdFuncionarios) {
         this.qtdFuncionarios = qtdFuncionarios;
+    }
+
+    public double getPontosCapacidadeInstalada() {
+        return pontosCapacidadeInstalada;
+    }
+
+    public void setPontosCapacidadeInstalada(double pontosCapacidadeInstalada) {
+        this.pontosCapacidadeInstalada = pontosCapacidadeInstalada;
+    }
+
+    public double getNotaCapacidadeInstalada() {
+        return notaCapacidadeInstalada;
+    }
+
+    public void setNotaCapacidadeInstalada(double notaCapacidadeInstalada) {
+        this.notaCapacidadeInstalada = notaCapacidadeInstalada;
+    }
+
+    public int getDemandaCapacidadeInstalada() {
+        return demandaCapacidadeInstalada;
+    }
+
+    public void setDemandaCapacidadeInstalada(int demandaCapacidadeInstalada) {
+        this.demandaCapacidadeInstalada = demandaCapacidadeInstalada;
     }
 }

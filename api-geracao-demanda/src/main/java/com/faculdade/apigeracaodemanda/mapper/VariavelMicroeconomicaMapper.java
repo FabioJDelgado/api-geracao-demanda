@@ -33,9 +33,20 @@ public class VariavelMicroeconomicaMapper {
         variavelMicroeconomica.setConfiabilidadeProduto2(variavelMicroeconomicaRequestDto.confiabilidadeProduto2());
         variavelMicroeconomica.setConfiabilidadeProduto3(variavelMicroeconomicaRequestDto.confiabilidadeProduto3());
 
+        variavelMicroeconomica.setCapacidadeInstalada(variavelMicroeconomicaRequestDto.capacidadeInstalada());
+
+        variavelMicroeconomica.setTamanhoEstabelecimentoPequeno(variavelMicroeconomicaRequestDto.tamanhoEstabelecimentoPequeno());
         variavelMicroeconomica.setPesoTamanhoEstabelecimentoPequeno(variavelMicroeconomicaRequestDto.pesoTamanhoEstabelecimentoPequeno());
+        variavelMicroeconomica.setQtdMaxCaixasEstabelecimentoPequeno(variavelMicroeconomicaRequestDto.qtdMaxCaixasEstabelecimentoPequeno());
+
+        variavelMicroeconomica.setTamanhoEstabelecimentoMedio(variavelMicroeconomicaRequestDto.tamanhoEstabelecimentoMedio());
         variavelMicroeconomica.setPesoTamanhoEstabelecimentoMedio(variavelMicroeconomicaRequestDto.pesoTamanhoEstabelecimentoMedio());
+        variavelMicroeconomica.setQtdMaxCaixasEstabelecimentoMedio(variavelMicroeconomicaRequestDto.qtdMaxCaixasEstabelecimentoMedio());
+
+        variavelMicroeconomica.setTamanhoEstabelecimentoGrande(variavelMicroeconomicaRequestDto.tamanhoEstabelecimentoGrande());
         variavelMicroeconomica.setPesoTamanhoEstabelecimentoGrande(variavelMicroeconomicaRequestDto.pesoTamanhoEstabelecimentoGrande());
+        variavelMicroeconomica.setQtdMaxCaixasEstabelecimentoGrande(variavelMicroeconomicaRequestDto.qtdMaxCaixasEstabelecimentoGrande());
+
         variavelMicroeconomica.setPesoCaixas(variavelMicroeconomicaRequestDto.pesoCaixas());
         variavelMicroeconomica.setPesoFuncionarios(variavelMicroeconomicaRequestDto.pesoFuncionarios());
 
@@ -62,9 +73,16 @@ public class VariavelMicroeconomicaMapper {
             variavelMicroeconomica.getConfiabilidadeProduto1(),
             variavelMicroeconomica.getConfiabilidadeProduto2(),
             variavelMicroeconomica.getConfiabilidadeProduto3(),
+            variavelMicroeconomica.getCapacidadeInstalada(),
+            variavelMicroeconomica.getTamanhoEstabelecimentoPequeno(),
             variavelMicroeconomica.getPesoTamanhoEstabelecimentoPequeno(),
+            variavelMicroeconomica.getQtdMaxCaixasEstabelecimentoPequeno(),
+            variavelMicroeconomica.getTamanhoEstabelecimentoMedio(),
             variavelMicroeconomica.getPesoTamanhoEstabelecimentoMedio(),
+            variavelMicroeconomica.getQtdMaxCaixasEstabelecimentoMedio(),
+            variavelMicroeconomica.getTamanhoEstabelecimentoGrande(),
             variavelMicroeconomica.getPesoTamanhoEstabelecimentoGrande(),
+            variavelMicroeconomica.getQtdMaxCaixasEstabelecimentoGrande(),
             variavelMicroeconomica.getPesoCaixas(),
             variavelMicroeconomica.getPesoFuncionarios()
         );

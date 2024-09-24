@@ -38,9 +38,16 @@ public class VariavelMicroeconomica implements Serializable {
     // Confiabilidade - FIM
 
     // Capacidade instalada - INÍCIO
+    private double capacidadeInstalada;
+    private double tamanhoEstabelecimentoPequeno;
     private double pesoTamanhoEstabelecimentoPequeno;
+    private int qtdMaxCaixasEstabelecimentoPequeno;
+    private double tamanhoEstabelecimentoMedio;
     private double pesoTamanhoEstabelecimentoMedio;
+    private int qtdMaxCaixasEstabelecimentoMedio;
+    private double tamanhoEstabelecimentoGrande;
     private double pesoTamanhoEstabelecimentoGrande;
+    private int qtdMaxCaixasEstabelecimentoGrande;
     private double pesoCaixas;
     private double pesoFuncionarios;
     // Capacidade instalada - FIM
@@ -193,12 +200,44 @@ public class VariavelMicroeconomica implements Serializable {
         this.confiabilidadeProduto3 = confiabilidadeProduto3;
     }
 
+    public double getCapacidadeInstalada() {
+        return capacidadeInstalada;
+    }
+
+    public void setCapacidadeInstalada(double capacidadeInstalada) {
+        this.capacidadeInstalada = capacidadeInstalada;
+    }
+
+    public double getTamanhoEstabelecimentoPequeno() {
+        return tamanhoEstabelecimentoPequeno;
+    }
+
+    public void setTamanhoEstabelecimentoPequeno(double tamanhoEstabelecimentoPequeno) {
+        this.tamanhoEstabelecimentoPequeno = tamanhoEstabelecimentoPequeno;
+    }
+
     public double getPesoTamanhoEstabelecimentoPequeno() {
         return pesoTamanhoEstabelecimentoPequeno;
     }
 
     public void setPesoTamanhoEstabelecimentoPequeno(double pesoTamanhoEstabelecimentoPequeno) {
         this.pesoTamanhoEstabelecimentoPequeno = pesoTamanhoEstabelecimentoPequeno;
+    }
+
+    public int getQtdMaxCaixasEstabelecimentoPequeno() {
+        return qtdMaxCaixasEstabelecimentoPequeno;
+    }
+
+    public void setQtdMaxCaixasEstabelecimentoPequeno(int qtdMaxCaixasEstabelecimentoPequeno) {
+        this.qtdMaxCaixasEstabelecimentoPequeno = qtdMaxCaixasEstabelecimentoPequeno;
+    }
+
+    public double getTamanhoEstabelecimentoMedio() {
+        return tamanhoEstabelecimentoMedio;
+    }
+
+    public void setTamanhoEstabelecimentoMedio(double tamanhoEstabelecimentoMedio) {
+        this.tamanhoEstabelecimentoMedio = tamanhoEstabelecimentoMedio;
     }
 
     public double getPesoTamanhoEstabelecimentoMedio() {
@@ -209,12 +248,36 @@ public class VariavelMicroeconomica implements Serializable {
         this.pesoTamanhoEstabelecimentoMedio = pesoTamanhoEstabelecimentoMedio;
     }
 
+    public int getQtdMaxCaixasEstabelecimentoMedio() {
+        return qtdMaxCaixasEstabelecimentoMedio;
+    }
+
+    public void setQtdMaxCaixasEstabelecimentoMedio(int qtdMaxCaixasEstabelecimentoMedio) {
+        this.qtdMaxCaixasEstabelecimentoMedio = qtdMaxCaixasEstabelecimentoMedio;
+    }
+
+    public double getTamanhoEstabelecimentoGrande() {
+        return tamanhoEstabelecimentoGrande;
+    }
+
+    public void setTamanhoEstabelecimentoGrande(double tamanhoEstabelecimentoGrande) {
+        this.tamanhoEstabelecimentoGrande = tamanhoEstabelecimentoGrande;
+    }
+
     public double getPesoTamanhoEstabelecimentoGrande() {
         return pesoTamanhoEstabelecimentoGrande;
     }
 
     public void setPesoTamanhoEstabelecimentoGrande(double pesoTamanhoEstabelecimentoGrande) {
         this.pesoTamanhoEstabelecimentoGrande = pesoTamanhoEstabelecimentoGrande;
+    }
+
+    public int getQtdMaxCaixasEstabelecimentoGrande() {
+        return qtdMaxCaixasEstabelecimentoGrande;
+    }
+
+    public void setQtdMaxCaixasEstabelecimentoGrande(int qtdMaxCaixasEstabelecimentoGrande) {
+        this.qtdMaxCaixasEstabelecimentoGrande = qtdMaxCaixasEstabelecimentoGrande;
     }
 
     public double getPesoCaixas() {

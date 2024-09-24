@@ -75,7 +75,7 @@ public class RodadaService {
         CalculoPropaganda.calculaDemandaPropaganda(partida, identificacaoRodada);
 
         // Calcula demanda da capacidade instalada
-        // FAZER
+        CalculoCapacidadeInstalada.calculaCapacidadeInstalada(partida, identificacaoRodada);
 
         // Calcula demanda da concorrência
         CalculoConcorrencia.calculaConcorrencia(partida, identificacaoRodada);
