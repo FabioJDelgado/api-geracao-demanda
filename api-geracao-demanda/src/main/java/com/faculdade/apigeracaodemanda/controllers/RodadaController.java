@@ -3,6 +3,7 @@ package com.faculdade.apigeracaodemanda.controllers;
 import com.faculdade.apigeracaodemanda.dtos.PartidaRegistroRodadaResponseDto;
 import com.faculdade.apigeracaodemanda.dtos.RodadaRegistroResquestDto;
 import com.faculdade.apigeracaodemanda.services.RodadaService;
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,7 @@ public class RodadaController {
     @Autowired
     private RodadaService rodadaService;
 
+    @Operation(description = "Realizar uma nova rodada")
     @PostMapping("/registrarRodada")
     public ResponseEntity<PartidaRegistroRodadaResponseDto> registrarRodada(@RequestBody @Valid RodadaRegistroResquestDto rodadaRegistroResquestDto){
         return ResponseEntity.ok(rodadaService.registrarRodada(rodadaRegistroResquestDto));
