@@ -66,7 +66,7 @@ public class RodadaService {
     private void calcularJogadasRodada(Partida partida, String identificacaoRodada){
 
         // Calcula impacto da taxa básica de juros
-        // FAZER
+        CalculoTaxaBasicaJurosRenda.calculaTaxaBasicaJurosRenda(partida);
 
         // Calcula demanda do preço
         CalculoPreco.calculaNotasPrecoDemandas(partida, identificacaoRodada);
