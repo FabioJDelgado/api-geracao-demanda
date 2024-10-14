@@ -18,8 +18,6 @@ public class CalculoTaxaBasicaJurosRenda {
             double demandaAlterada = (1 + variacaoTaxaBasicaJuros) * partida.getFatiaMercado();
 
             partida.setFatiaMercado(Math.ceil(demandaAlterada));
-            System.out.println("Taxa básica de juros alterada para: " + partida.getFatiaMercado());
-
         }
 
     }
