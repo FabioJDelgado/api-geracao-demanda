@@ -26,8 +26,8 @@ public class ValidacaoRodadaRegistro implements ConstraintValidator<ValidaRodada
                 erros.add(new ErroInfo("identificacaoPartida", "A partida informada não existe ou já foi finalizada"));
             }
 
-            if (dto.jogadas().size() < 2) {
-                erros.add(new ErroInfo("qtdJogadas", "A quantidade mínima de jogadas em cada rodade é 2"));
+            if (dto.jogadas().size() < 1) { // Verificar com o Luiz Cláudio
+                erros.add(new ErroInfo("qtdJogadas", "A quantidade mínima de jogadas em cada rodade é 1"));
             }
 
             Partida partida = Util.recuperaPartida(dto.identificacaoPartida());

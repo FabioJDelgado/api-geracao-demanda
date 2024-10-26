@@ -2,9 +2,9 @@ package com.faculdade.apigeracaodemanda.functionsCalculatesDemandVariables;
 
 import com.faculdade.apigeracaodemanda.models.Partida;
 
-public class CalculoTaxaBasicaJurosRenda {
+public class CalculoTaxaBasicaJuros {
 
-    public static void calculaTaxaBasicaJurosRenda(Partida partida){
+    public static void calculaTaxaBasicaJuros(Partida partida){
 
         int resto = (partida.getContadorRodadas() - 1) % 3;
 
