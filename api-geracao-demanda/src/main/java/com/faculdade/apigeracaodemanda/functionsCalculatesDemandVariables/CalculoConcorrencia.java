@@ -46,7 +46,11 @@ public class CalculoConcorrencia {
             for (Jogada jogada : partida.recuperaRodada(identificacaoRodada).getJogadas()) {
                 if(jogada.getIdentificacaoJogada().equals(chave)) {
                     double demandaTotalJogadaAjustada = jogada.getDemandaTotalJogada() * multiplicadoresAumento[contador[0]];
-                    jogada.setDemandaTotalJogada((int) Math.ceil(demandaTotalJogadaAjustada));
+                    if(demandaTotalJogadaAjustada > partida.getFatiaMercado()) {
+                        jogada.setDemandaTotalJogada((int) partida.getFatiaMercado());
+                    } else{
+                        jogada.setDemandaTotalJogada((int) Math.ceil(demandaTotalJogadaAjustada));
+                    }
                     contador[0]++;
                 }
             }

@@ -40,15 +40,19 @@ public class CalculoPreco {
     }
 
     private static double calcularNota(double preco, List<Double> listaPrecos, double fatorPenalidade) {
-        double somaPrecos = listaPrecos.stream().mapToDouble(Double::doubleValue).sum();
-        double menorPreco = listaPrecos.stream().mapToDouble(Double::doubleValue).min().orElse(0);
-        double maiorPreco = listaPrecos.stream().mapToDouble(Double::doubleValue).max().orElse(0);
+        if(listaPrecos.size() == 1){
+            return 10;
+        } else{
+            double somaPrecos = listaPrecos.stream().mapToDouble(Double::doubleValue).sum();
+            double menorPreco = listaPrecos.stream().mapToDouble(Double::doubleValue).min().orElse(0);
+            double maiorPreco = listaPrecos.stream().mapToDouble(Double::doubleValue).max().orElse(0);
 
-        double diferencaMaiorMenor = (maiorPreco - menorPreco) == 0 ? 1 : maiorPreco - menorPreco;
+            double diferencaMaiorMenor = (maiorPreco - menorPreco) == 0 ? 1 : maiorPreco - menorPreco;
 
-        double nota = (10 - ((preco / somaPrecos) * 10)) - (((preco - menorPreco) / diferencaMaiorMenor) * fatorPenalidade);
+            double nota = (10 - ((preco / somaPrecos) * 10)) - (((preco - menorPreco) / diferencaMaiorMenor) * fatorPenalidade);
 
-        return nota;
+            return nota;
+        }
     }
 
     public static void calculaNotasPrecoDemandas(Partida partida, String identificacaoRodada){
