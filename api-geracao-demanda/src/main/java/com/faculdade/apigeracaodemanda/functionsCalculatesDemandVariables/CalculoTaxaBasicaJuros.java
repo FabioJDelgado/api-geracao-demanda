@@ -15,9 +15,9 @@ public class CalculoTaxaBasicaJuros {
 
             double variacaoTaxaBasicaJuros = ((taxaBasicaJurosAtual - taxaBasicaJurosAnterior) / taxaBasicaJurosAnterior) * -partida.getVariavelMacroeconomica().getFatorAjuste();
 
-            double demandaAlterada = (1 + variacaoTaxaBasicaJuros) * partida.getFatiaMercado();
+            double fatiaMercadoAlterada = (1 + variacaoTaxaBasicaJuros) * partida.getFatiaMercado();
 
-            partida.setFatiaMercado(Math.ceil(demandaAlterada));
+            partida.setFatiaMercado(Math.ceil(fatiaMercadoAlterada));
         }
 
     }
