@@ -51,6 +51,10 @@ public class CalculoPreco {
 
             double nota = (10 - ((preco / somaPrecos) * 10)) - (((preco - menorPreco) / diferencaMaiorMenor) * fatorPenalidade);
 
+            if(nota < 0){
+                nota = 0;
+            }
+
             return nota;
         }
     }
