@@ -1,0 +1,51 @@
+-> Tópicos
+
+------ Introdução ------
+-> Obrigatoriamente precisa ter o TEMA
+-> Delimitação do tema
+-> Justificativa (Pq é importante pesquisar esse tema)
+-> Apresentar problema de pesquisa
+-> Apresentar objetivos
+-> Apresentar de forma geral a metodologia utilizada
+-> Classificar a pesquisa
+-> Apresentar a estrutura do trabalho em tópicos
+
+
+------ Tópicos ------
+
+-> Referencial Teórico
+	- Conceitos de simulação
+		- Apresentar Modelos
+	- Variáveis
+	- 
+
+-> Metodologia (Verificar a necessidade de criar subtópicos)
+	- Classificar a pesquisa detalhado
+	- Decidir o tipo de modelagem escolhido e justificar
+	- Descrever os métodos e técnicas utilizados
+		- Detalhar o máximo a pesquisa
+		- Destacar métodos e técnicas
+		- Ferramentas e linguagens utilizadas
+
+-> Desenvolvimento
+	- Diagrama de classes
+	- Estrutura da API
+	- Rotas da API
+	- Parte lógica da API
+	
+-> Testes
+	- Colocar a previsibilidade da API
+	- Falar das limitações
+	- Não há contexto coerentes pois foram dados aleatórios
+	- Futuramente utilizar a implementação da API em um jogo para realizar testes mais profundos
+
+-> Conclusão
+	- Utilidade da API
+	- Como pode ser utilizada
+	- Sugestão de aplicações
+	- Limitações
+
+-> Referências			
+
+
+
