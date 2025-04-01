@@ -37,7 +37,7 @@ public class CalculoCapacidadeInstalada {
     private static double calcularNota(double pontosCapacidadeInstalada, double somaPontosCapacidadeInstalada, double menorPontosCapacidadeInstalada, double maiorPontosCapacidadeInstalada) {
         double diferencaMaiorMenor = (maiorPontosCapacidadeInstalada - menorPontosCapacidadeInstalada) == 0 ? 1 : maiorPontosCapacidadeInstalada - menorPontosCapacidadeInstalada;
 
-        double nota = ((pontosCapacidadeInstalada / somaPontosCapacidadeInstalada) * 10) - (((pontosCapacidadeInstalada - maiorPontosCapacidadeInstalada) / diferencaMaiorMenor) * -1);
+        double nota = ((pontosCapacidadeInstalada / somaPontosCapacidadeInstalada) * 10) - (((pontosCapacidadeInstalada - maiorPontosCapacidadeInstalada) / diferencaMaiorMenor) * (-1));
 
         if (nota < 0) {
             nota = 0;
