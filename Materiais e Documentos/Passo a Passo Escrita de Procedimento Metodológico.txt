@@ -1,4 +1,0 @@
-- Parágrafo dizendo o que é a API
-- Explicação de modelos, mostrando que o trabalho não é uma representação 100% fidedgina da realidade
-- Explicar diagrama de classe (Explicar o que é e para que serve cada atributo daquele)
-- Explicar o cálculo desenvolvido em cada variável

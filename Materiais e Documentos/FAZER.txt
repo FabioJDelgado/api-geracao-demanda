@@ -1,5 +1,0 @@
--> Validar quantidade de taxas básica de juros com a quantidade de rodadas {[(qtdRodadas - 1) / 3] + 1}
--> Validar identificação da jogada (Verificar se não são repetidas e se são as mesmas de rodadas anteriores)
--> Continuar implementação dos outros cálculos
--> Salvar partida antes do envio
--> Fazer documentação
