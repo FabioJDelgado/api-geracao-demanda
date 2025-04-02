@@ -54,34 +54,12 @@ public class RodadaService {
         rodada.setJogadas(jogadas);
 
         // Chama o método para fazer os cálculos das jogadas da rodada
-        calcularJogadasRodada(partida, rodada.getIdentificacaoRodada());
+        rodada.calculaDemandaJogadas(partida);
 
         // Salvar partida em arquivo
         Util.salvaPartida(partida);
 
         // Retorna a rodada registrada
         return PartidaMapper.toPartidaRegistroRodadaResponseDto(partida, rodada.getIdentificacaoRodada());
-    }
-
-    private void calcularJogadasRodada(Partida partida, String identificacaoRodada){
-
-        // Calcula impacto da taxa básica de juros
-        CalculoTaxaBasicaJuros.calculaTaxaBasicaJuros(partida);
-
-        // Calcula demanda do preço
-        CalculoPreco.calculaNotasPrecoDemandas(partida, identificacaoRodada);
-
-        // Calcula demanda da propaganda
-        CalculoPropaganda.calculaDemandaPropaganda(partida, identificacaoRodada);
-
-        // Calcula demanda da capacidade instalada
-        CalculoCapacidadeInstalada.calculaCapacidadeInstalada(partida, identificacaoRodada);
-
-        // Calcula demanda da concorrência
-        CalculoConcorrencia.calculaConcorrencia(partida, identificacaoRodada);
-
-        // Calcula demanda da confiabilidade (Deve ser o último cálculo)
-        CalculoConfiabilidade.calculaConfiabilidade(partida, identificacaoRodada);
-
     }
 }

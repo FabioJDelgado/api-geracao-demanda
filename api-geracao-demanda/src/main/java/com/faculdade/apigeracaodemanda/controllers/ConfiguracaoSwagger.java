@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
     info = @Info(
         title = "API Geração de Demanda",
         version = "v1.0",
-        description = "Essa API é disponibilizada com intuito de ajudar na criação de simuladores de vendas gamificados, que utilizam geradores de demanda, " +
+        description = "Essa API é disponibilizada com intuito de ajudar na criação de simuladores empresariais, que utilizam geradores de demanda, " +
                       "de forma que sejam acessíveis para auxiliar no ensino de alunos do curso técnico em Administração a aprender de forma prática e intuitiva em paralelo " +
                       "com a visão teórica aprendida nas aulas ministradas.\n\n" +
                       "Dito isto, essa API busca ser o ponto de partida para auxiliar a criação de ferramentas de " +
